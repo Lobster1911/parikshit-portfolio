@@ -1,0 +1,442 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffcc80;
+}
+
+
+
+.button-three {
+    --button-color: #00ccff; /* Adjust the button color */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.button-three .hamburger {
+    transition: translate 0.5s ease, rotate 0.5s ease;
+}
+
+.button-three[aria-expanded="true"] .hamburger {
+    translate: 5px -5px;
+    rotate: 0.125turn;
+}
+
+.button-three .line {
+    transition: 0.5s ease;
+    stroke-dasharray: 60 31 60 300;
+}
+
+.button-three[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+}
+
+
+
+@keyframes to-close-icon {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 79.9;
+    }
+    60% {
+        stroke-dashoffset: 79.9;
+        rotate: calc(var(--rotation));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+    }
+}
+
+@keyframes to-open-icon {
+    0% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+    }
+    40% {
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
+    }
+    60% {
+        stroke-dashoffset: 79.9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+
+/* Navbar styling */
+.navbar {
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    color: #00ccff; /* Electric Blue */
+    margin: 0;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar nav ul li a {
+    color: #00ccff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffcc80;
+}
+
+/* Subtitle below the name */
+.subtitle {
+    font-size: 20px;
+    color: #00ccff;
+    text-align: left;
+    margin-top: -35px;
+    margin-left: 20px;
+}
+
+
+
+/* Hamburger menu icon styling */
+#mobile-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00ccff;
+    margin-left: auto;
+}
+
+
+
+
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    /* Show the hamburger menu */
+    #mobile-menu {
+        display: block;
+    }
+
+    /* Hide the menu items by default */
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust for space below the header */
+        right: 0; /* Align it to the right edge of the screen */
+        left: 0; /* Make it fit the screen width */
+        margin: 0 auto; /* Center the dropdown */
+        background-color: #1f1f1f; /* Slightly lighter black */
+        width: 90%; /* Take up most of the screen width without overflow */
+        max-width: 400px; /* Ensure the dropdown has a maximum width */
+        padding: 10px 0; /* Padding inside the menu */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Box shadow for depth */
+        border-radius: 10px; /* Smooth rounded corners */
+        text-align: center;
+        z-index: 100; /* Ensure it stays on top */
+    }
+
+    /* Menu items */
+    .navbar nav ul li {
+        margin-bottom: 10px; /* Space between items */
+        list-style: none;
+    }
+
+    /* Show the menu when active */
+    .navbar.active nav ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Slide down when activated */
+    }
+
+    /* Style for the menu links */
+    .navbar nav ul li a {
+        color: #00ccff;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Each menu link */
+    .navbar nav ul li {
+        margin-bottom: 15px; /* Space between the menu items */
+        list-style: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 2.5em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Typing effect styles */
+#typing-effect {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 18px;
+    color: #e0e0e0;
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 3px solid #bb86fc;
+    width: fit-content;
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from { border-right-color: #bb86fc; }
+    to { border-right-color: transparent; }
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 5px solid #af60ff;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.profile-image:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+#about p {
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+/* Sections */
+section {
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 900px;
+}
+
+section h2 {
+    color: #bb86fc;
+    font-size: 32px;
+    background: linear-gradient(to right, #af60ff, #ffcc80);
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Projects */
+.project {
+    background-color: #1f1f1f;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: #292929;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.project h3 {
+    color: #bb86fc;
+    margin-top: 0;
+}
+
+.project-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+
+
+/* View More */
+
+
+/* View More link with Arrow */
+.view-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-more-link {
+    font-size: 1.2rem;
+    color: #af60ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center; /* Align text with icon */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.view-more-link i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.view-more-link:hover i {
+    transform: translateX(8px); /* Move the arrow to the right */
+}
+
+.view-more-link:hover {
+    color: #ffcc80;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2em;
+}
+
+#contact h2 {
+    font-size: 32px;
+    color: linear-gradient(to right, #af60ff, #ffcc80)c;
+    margin-bottom: 1em;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-bottom: 1.5em;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+.contact-info ul li {
+    margin-bottom: 1em;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #bb86fc;
+}
+
+.contact-info ul li a {
+    color: #00ccff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info ul li a:hover {
+    color: #ffcc80;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #666;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

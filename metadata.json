@@ -1,0 +1,6 @@
+{
+  "name": "Parikshit Padole Portfolio",
+  "description": "Portfolio of Parikshit Padole showcasing Robotics and AI projects, publications, and background.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

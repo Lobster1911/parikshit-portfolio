@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Identification using Raspberry Pi 4B</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1><a href="../index.html">Parikshit Padole</a></h1>
+            <!-- Smaller Hamburger Menu Button -->
+            <button class="button-three" id="mobile-menu" aria-controls="primary-navigation" aria-expanded="false">
+                <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="40" height="40">
+                    <path class="line" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" 
+                          d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"></path>
+                </svg>
+            </button>
+            <nav>
+                <ul id="menu-items">
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="projectlist.html">Projects</a></li>
+                    <li><a href="https://blogs.imperial.ac.uk/parikshit/">Blogs</a></li>
+                    <li><a href="../images/Resume - Parikshit.pdf" download="Parikshit_Padole_Resume.pdf">Resume</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="subtitle">Robotics and AI</p>
+    </header>
+    
+
+    <section id="project-details">
+        <h2>Rock Identification using Raspberry Pi 4B</h2>
+        <p>This project automates the identification and classification of rocks using a machine learning model deployed on a Raspberry Pi 4B. It enhances the speed and accuracy of rock identification for geology, mining, and educational purposes.</p>
+        <p>The project involves a custom CNN model and a pre-trained ResNet model to classify images of rocks into 53 different types. The solution includes data preprocessing, model conversion, and deployment on the Raspberry Pi for real-time identification using a camera setup.</p>
+
+        <h3>Key Features:</h3>
+        <div class="feature-cards">
+            <div class="card">
+                <p>Automated rock identification using a custom CNN model.</p>
+            </div>
+            <div class="card">
+                <p>Real-time rock classification using a Raspberry Pi 4B.</p>
+            </div>
+            <div class="card">
+                <p>Dataset of 53 rock types sourced and augmented via web scraping.</p>
+            </div>
+            <div class="card">
+                <p>Machine learning models: Custom CNN and pre-trained ResNet.</p>
+            </div>
+            <div class="card">
+                <p>Conversion of the CNN model to TensorFlow Lite for optimized Raspberry Pi deployment.</p>
+            </div>
+        </div>
+
+        <h3>Technologies Used:</h3>
+        <div class="tech-cards">
+            <div class="card">
+                <p>Hardware: Raspberry Pi 4B, Logitech C270 HD Webcam, Microsoft Surface Laptop Go 2.</p>
+            </div>
+            <div class="card">
+                <p>Machine Learning Models: Custom CNN, ResNet50.</p>
+            </div>
+            <div class="card">
+                <p>Libraries: TensorFlow, TensorFlow Lite, Python.</p>
+            </div>
+        </div>
+
+        <h3>Links:</h3>
+        <ul class="no-bullets">
+            <li><a href="https://github.com/Lobster1911/Rock-Identification" target="_blank" class="link-text">GitHub Repository</a></li>
+            <!-- <li><a href="https://www.academia.edu/123456789/Rock_Identification_using_Raspberry_Pi" target="_blank" class="link-text">Research Project Report</a></li> -->
+        </ul>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parikshit Padole. All Rights Reserved.</p>
+    </footer>
+    <script src="../menu.js"> </script>
+</body>
+</html>

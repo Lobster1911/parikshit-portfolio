@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Tracking and Trajectory Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1><a href="../index.html">Parikshit Padole</a></h1>
+            <!-- Smaller Hamburger Menu Button -->
+            <button class="button-three" id="mobile-menu" aria-controls="primary-navigation" aria-expanded="false">
+                <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="40" height="40">
+                    <path class="line" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" 
+                          d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"></path>
+                </svg>
+            </button>
+            <nav>
+                <ul id="menu-items">
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="projectlist.html">Projects</a></li>
+                    <li><a href="https://blogs.imperial.ac.uk/parikshit/">Blogs</a></li>
+                    <li><a href="../images/Resume - Parikshit.pdf" download="Parikshit_Padole_Resume.pdf">Resume</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="subtitle">Robotics and AI</p>
+    </header>
+
+    
+
+    <section id="project-details">
+        <h2>Satellite Tracking and Trajectory Prediction Application</h2>
+        <p>This project enhances Space Situational Awareness (SSA) by providing real-time satellite tracking and trajectory prediction for Earth’s orbit.</p>
+        <p>The application integrates open-source Two-Line Element (TLE) data with both traditional mathematical models and an experimental Long Short-Term Memory (LSTM) machine learning model for precise satellite trajectory prediction. Additionally, it includes a rocket launch simulation tool to predict trajectories based on input parameters.</p>
+
+        <h3>Key Features:</h3>
+        <div class="feature-cards">
+            <div class="card">
+                <p>Real-time satellite tracking across all Earth orbits.</p>
+            </div>
+            <div class="card">
+                <p>Prediction of satellite trajectories using traditional models and LSTM machine learning.</p>
+            </div>
+            <div class="card">
+                <p>Rocket launch simulation based on input parameters like thrust and weather conditions.</p>
+            </div>
+            <div class="card">
+                <p>3D satellite visualization using Three.js.</p>
+            </div>
+            <div class="card">
+                <p>Integration of TLE data for satellite tracking.</p>
+            </div>
+        </div>
+
+        <h3>Technologies Used:</h3>
+        <div class="tech-cards">
+            <div class="card">
+                <p>Frontend: React.js, Three.js, React-Three-Fiber, React-Bootstrap.</p>
+            </div>
+            <div class="card">
+                <p>Backend: Python Flask, TensorFlow (LSTM Model), Satellite.js for TLE data.</p>
+            </div>
+            <div class="card">
+                <p>APIs: CelesTrak (satellite data), OpenWeatherMap (weather data for launch simulation).</p>
+            </div>
+        </div>
+
+        <h3>Links:</h3>
+        <ul class="no-bullets">
+            <li><a href="https://github.com/Lobster1911/Earth-Eye" target="_blank" class="link-text">GitHub Repository</a></li>
+            <li><a href="https://www.academia.edu/124020098/Satellite_Tracking_and_Trajectory_Prediction_Application" target="_blank" class="link-text">Research Project Report</a></li>
+        </ul>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parikshit Padole. All Rights Reserved.</p>
+    </footer>
+    <script src="../menu.js"> </script>
+</body>
+</html>
