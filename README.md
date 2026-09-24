@@ -1,6 +1,6 @@
 ## Live Demo
 
-portfolio [https://lobster1911.github.io/portfolio-parikshit/](https://lobster1911.github.io/portfolio-parikshit/)
+portfolio [https://lobster1911.github.io/parikshit-portfolio/](https://lobster1911.github.io/parikshit-portfolio/)
 
 ## About
 
